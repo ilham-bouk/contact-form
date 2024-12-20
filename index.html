@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap">
+
+    <title>Frontend Mentor | Contact form</title>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <div class="success">
+          <h3>
+            <img src="./assets/images/icon-success-check.svg" alt="icon-success-check">
+            Message Sent!
+          </h3>
+          <p>Thanks for completing the form. We'll be in touch soon!</p>
+        </div>
+        <h2>Contact Us</h2>
+        <div class="full-name box">
+          <div class="fname">
+            <label for="fname-inp">First Name <span>*</span></label><br>
+            <input type="text" id="fname-inp">
+            <div class="errorMsg">This field is required</div>        
+          </div>
+          <div class="lname">
+            <label for="lname-inp">Last Name <span>*</span></label><br>
+            <input type="text" id="lname-inp">
+            <div class="errorMsg">This field is required</div>        
+          </div>
+        </div>
+        <div class="email box">
+          <label for="email-inp">Email Address <span>*</span></label><br>
+          <input type="email" id="email-inp">
+          <div class="errorMsg">Please enter a valid email address</div>  
+        </div>
+        <div class="query-type box">
+          <label>Query Type <span>*</span></label><br>
+          <div class="options">
+            <div class="foption">
+              <input type="radio" id="first-radio">
+              <label for="first-radio">General Enquiry</label>
+            </div>
+            <div class="loption">
+              <input type="radio" id="last-radio">
+              <label for="last-radio">Support Request</label>
+            </div>
+          </div>
+          <div class="errorMsg">Please select a query type</div>
+        </div>
+        <div class="message box">
+          <label for="msg-area">Message <span>*</span></label><br>
+          <textarea id="msg-area"></textarea>
+          <div class="errorMsg">This field is required</div>
+        </div>
+        <div class="check box">
+          <input type="checkbox" id="check-box">
+          <label for="check-box">I consent to being contacted by the team <span>*</span></label>
+          <div class="errorMsg">To submit this form, please consent to being contacted</div>
+        </div>
+        <button type="submit">Submit</button>
+      </div>
+    </div>    
+
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+:root {
+  --lighter-green: hsl(148, 38%, 91%);
+  --medium-green: hsl(169, 82%, 27%);
+  --primary-red: hsl(0, 66%, 54%); 
+  --medium-grey: hsl(186, 15%, 59%);
+  --darker-grey: hsl(187, 24%, 22%);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  background-color: var(--lighter-green);
+  display: grid;
+}
+.form {
+  background-color: white;
+  width: 600px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.success {
+  background-color: var(--darker-grey);
+  color: white;
+  display: none;
+  width: 400px;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  padding: 20px;
+  border-radius: 10px;
+  top: -70px;
+}
+.success h3 {
+  margin: 0;
+  display: flex;
+  gap: 10px;
+}
+.success p {
+  margin: 10px 0 0;
+  font-size: 14px;
+}
+
+.form h2 {
+  margin: 0 0 25px;
+  color: var(--darker-grey);
+}
+.form .box {
+  width: 100%;
+  margin-bottom: 23px;
+}
+.form .full-name {
+  display: flex;
+  gap: 10px;
+}
+.form .full-name input {
+  width: 265px;
+}
+.form label {
+  color: var(--darker-grey);
+}
+.form label span {
+  color: var(--medium-green);
+}
+.form input:not([type = "radio"]):not([type = "checkbox"]), 
+.form textarea {
+  border: 1px solid var(--medium-grey);
+  border-radius: 7px;
+  padding: 9px;
+  margin-top: 5px;
+  font-family: "Karla", sans-serif;
+}
+.form input:not([type = "radio"]):not([type = "checkbox"]):focus, 
+.form textarea:focus {
+  border: 2px solid var(--medium-green);
+  outline: none;
+}
+.form .email input {
+  width: 100%;
+}
+.form .query-type .options {
+  display: flex;
+  gap: 10px;
+}
+.form .query-type .options .foption,
+.form .query-type .options .loption {
+  border: 1px solid var(--medium-grey);
+  padding: 8px 15px;
+  border-radius: 7px;
+  margin-top: 5px;
+  width: 265px;
+  cursor: pointer;
+}
+.form .message textarea {
+  width: 100%;
+  height: 60px;
+  height: 70px;
+}
+.form .check input, .form .check label {
+  cursor: pointer;
+}
+.form .errorMsg {
+  display: none;
+  color: var(--primary-red);
+  margin: 5px 3px 0;
+  font-size: 14px;
+}
+.form .error .errorMsg {
+  display: block;
+}
+.form button {
+  background-color: var(--medium-green);
+  width: 100%;
+  padding: 14px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 7px;
+  letter-spacing: 1px;
+  font-family: "Karla", sans-serif;
+  transition: .3s;
+}
+.form button:hover {
+  background-color: hsl(169deg 79.84% 19.26%);
+}
+
+@media (max-width: 600px) {
+  .form {
+    width: 450px;
+  }
+  .form .full-name input {
+    width: 190px;
+  }
+}
+@media (max-width: 450px) {
+  .form {
+    width: 340px;
+    margin: 20px auto;
+    height: fit-content;
+  }
+  .success {
+    top: -10px;
+    width: 320px;
+  }
+  .form .full-name {
+    flex-direction: column;
+    gap: 23px;
+  }
+  .form .query-type .options {
+    flex-direction: column;
+  }
+  .form .full-name input,
+  .form .query-type .options .foption,
+  .form .query-type .options .loption {
+    width: 100%;
+  }
+  .form .message textarea {
+    height: 200px;
+  }
+}
